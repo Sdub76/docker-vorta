@@ -1,7 +1,6 @@
 #!/bin/sh
 
 #set home directory
-export HOME=/config
-
+export HOME=/locations
 
 exec vorta

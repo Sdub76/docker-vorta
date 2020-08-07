@@ -9,6 +9,13 @@ RUN \
 	pip3 install --upgrade pip && pip3 install vorta && \
 	del-pkg build-base
 
+#Create working directory for Vorta
+RUN mkdir /locations
+
+#Take ownership of working directory via s6
+COPY takeown.sh /etc/cont-init.d/00-takeown.sh
+
+#Vorta start app script
 COPY startapp.sh /startapp.sh
 
 ENV APP_NAME="Vorta"

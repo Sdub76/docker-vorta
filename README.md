@@ -4,8 +4,20 @@ Vorta over noVNC
 ## Deploy using the following
 
 ```
-docker run --name vorta -p 5800:5800 -v /hostbackuprepo:/backups -v /hostsource:/source docker-vorta
+docker run \
+    --name vorta \
+    -p 5800:5800 \
+    -v /hostbackup:/locations/backup \
+    -v /hostsource:/locations/source \
+    -v /configlocation:/config \
+    docker-vorta
 ```
+
+## Additional Info
+
+Borg cache is located in /config/xdg/cache/borg/
+
+Web links are not working within the container
 
 ## Important ENVs
 
