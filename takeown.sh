@@ -8,7 +8,7 @@ log() {
 }
 
 if [ "${TAKE_CONFIG_OWNERSHIP:-1}" -eq 1 ]; then
-    if ! chown -R $USER_ID:$GROUP_ID /locations; then
+    if ! chown $USER_ID:$GROUP_ID /locations; then
         # Failed to take ownership of /locations.  This could happen when,
         # for example, the folder is mapped to a network share.
         # Continue if we have write permission, else fail.
