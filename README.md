@@ -1,3 +1,6 @@
+Fork to add SSH and FUSE support
+Maybe add borgmatic support for an all-in-one borg solution for Unraid
+
 # docker-vorta
 Vorta over noVNC
 
